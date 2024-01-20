@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
 import { UserModule } from './user/user.module';
+import { config } from 'src/configs';
 
 @Module({
-  imports: [UserModule],
+  imports: [config.mysql, UserModule],
   controllers: [],
   providers: [],
 })
